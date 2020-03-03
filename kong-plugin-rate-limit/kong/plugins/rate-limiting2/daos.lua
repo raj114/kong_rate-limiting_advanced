@@ -1,0 +1,5 @@
+return {
+  tables = {
+    "ratelimit"
+  },
+}
