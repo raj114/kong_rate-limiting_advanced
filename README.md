@@ -11,9 +11,15 @@ This README would normally document whatever steps are necessary to get your app
 ### How do I get set up? ###
 
 * Summary of set up
+
 * Configuration
 * Dependencies
 * Database configuration
+	Add database configuration in your kong.conf file assume that you used postgresql data base then add following entries in kong.conf file
+		pg_user = your_user                  # Postgres user.
+		pg_password = your_password                 # Postgres user's password.
+		pg_database = your_databaseName              # The database name to connect to.
+
 * How to run tests
 * Deployment instructions
 
