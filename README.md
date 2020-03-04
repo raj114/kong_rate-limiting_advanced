@@ -86,14 +86,15 @@ This README would normally document whatever steps are necessary to get your app
 			sudo kong reload
 	
 
+
 * How the plugin actual works :-
 
-   * Rate limiting plugin basically used for to apply restriction on API calls for better performance.
+	* Rate limiting plugin basically used for to apply restriction on API calls for better performance.
    
-   * Now how it works in that case firstly we create a consumer when we create a consumer we send tag in request body the tag like it is Tenant or it is APP_CLIENT 
+   	* Now how it works in that case firstly we create a consumer when we create a consumer we send tag in request body the tag like it is Tenant or it is APP_CLIENT 
 	  there are multiple app clients.
    
-   * After creating consumers we know the all consumer ids and using tag we also know the who is Tenant and who is APP_CLIENT so we used that consumer id as a parent consumer id in our 
+   	* After creating consumers we know the all consumer ids and using tag we also know the who is Tenant and who is APP_CLIENT so we used that consumer id as a parent consumer id in our 
 	  rate-limiting plugin when we enabled our plugin on that consumer.
 
 	
