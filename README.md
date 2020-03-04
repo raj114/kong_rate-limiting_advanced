@@ -118,5 +118,5 @@ This README would normally document whatever steps are necessary to get your app
 * Other community or team contact
 
 	# Kanaka Software 
-		* 302 Indira Icon, Right Bhusari Colony, Paud Road, Pune - 411038 INDIA.
+		* Address :- 302 Indira Icon, Right Bhusari Colony, Paud Road, Pune - 411038 INDIA.
 		* Email :- info@kanakasoftware.com
