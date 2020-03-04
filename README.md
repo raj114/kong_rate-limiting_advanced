@@ -90,7 +90,7 @@ This README would normally document whatever steps are necessary to get your app
 * How the plugin actual works :-
 
 
-	* Rate limiting plugin basically used for to apply restriction on API calls for better performance.
+	* Rate limiting plugin basically used for to apply restriction on API calls for controling the API Access.
    
    	* Now how it works in that case firstly we create a consumer when we create a consumer we send tag in request body the tag like it is Tenant or it is APP_CLIENT 
 	  there are multiple app clients.
