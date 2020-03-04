@@ -1,3 +1,8 @@
+-------------------------------------
+-- It defines the what parameters required in request body
+-- @author : Rajendra Garade
+-------------------------------------
+
 local typedefs = require "kong.db.schema.typedefs"
 
 

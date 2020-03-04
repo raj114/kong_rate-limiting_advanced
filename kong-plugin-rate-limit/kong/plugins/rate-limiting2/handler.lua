@@ -1,4 +1,9 @@
--- Copyright (C) Kong Inc.
+-- RateLimiting Handler
+-------------------------------------
+-- 
+-- @author : Rajendra Garade
+-------------------------------------
+
 local timestamp = require "kong.tools.timestamp"
 local policies = require "kong.plugins.rate-limiting2.policies"
 local BasePlugin = require "kong.plugins.base_plugin"
@@ -101,7 +106,7 @@ end
 
 
 local function get_access(config,data)
-  
+
   local current_timestamp = time() * 1000
   local identifier
 
@@ -174,7 +179,7 @@ local function get_access(config,data)
   end
   
   c_id = config.consumer_id
-  -- if the parent consumer is is prsent in config json then it also update the values for that id in database
+  -- if the parent consumer is is present in config json then it also update the values for that consumer_id in database
   if type(config.consumer_id) ~= "userdata" then 
     local config,err = policies[config.policy].parent_config(config.consumer_id)
    if err then

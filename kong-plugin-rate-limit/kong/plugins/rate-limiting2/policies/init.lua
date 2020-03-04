@@ -1,3 +1,9 @@
+
+-------------------------------------
+-- 
+-- @author : Rajendra Garade
+-------------------------------------
+
 local policy_cluster = require "kong.plugins.rate-limiting2.policies.cluster"
 local timestamp = require "kong.tools.timestamp"
 local reports = require "kong.reports"

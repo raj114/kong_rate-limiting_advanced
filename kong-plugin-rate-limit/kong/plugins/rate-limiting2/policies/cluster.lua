@@ -1,3 +1,8 @@
+-------------------------------------
+-- It performs operation on database and returns response to the ratelimiting handler
+-- @author : Rajendra Garade
+-------------------------------------
+
 local timestamp = require "kong.tools.timestamp"
 local cassandra = require "cassandra"
 
