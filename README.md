@@ -98,20 +98,20 @@ This README would normally document whatever steps are necessary to get your app
 	  rate-limiting plugin when we enabled our plugin on that consumer.
 
 	
-		* let assume one example let say we create three consumers 
+			* let assume one example let say we create three consumers 
 		
-				Tenant (tag) - 3205c031-c37e-4a64-9163-5e2ab78b482f (consumer_id) - 5 (rate-limit in hour) 
+					Tenant (tag) - 3205c031-c37e-4a64-9163-5e2ab78b482f (consumer_id) - 5 (rate-limit in hour) 
 			
-				App_client_1 (tag) - 2661129c-b596-460c-9a75-bc0f8b1de795 (consumer_id) - 3 (rate-limit in hour) 
+					App_client_1 (tag) - 2661129c-b596-460c-9a75-bc0f8b1de795 (consumer_id) - 3 (rate-limit in hour) 
 			
-				App_client_2 (tag) - 7768beb7-8048-4ed4-aafb-053d51960659 (consumer_id) -2 (rate-limit in hour) 
+					App_client_2 (tag) - 7768beb7-8048-4ed4-aafb-053d51960659 (consumer_id) -2 (rate-limit in hour) 
 
-		* we can identify the consumers using tags.
+			* we can identify the consumers using tags.
 
-		* when we apply rate-limiting plugin on App_client_1 and App_client_2 we can pass the Tenant consumer id as a parent consumer id in the requst body for enable the plugin,
-	  	  if and only if  you want to apply hirarachy between tenant and App_client.
+			* when we apply rate-limiting plugin on App_client_1 and App_client_2 we can pass the Tenant consumer id as a parent consumer id in the requst body for enable the plugin,
+	  	  	  if and only if  you want to apply hirarachy between tenant and App_client.
 
-		* when we hit the api for App_client_1 that time our plugin update the value for that consumer id also and if the parent consumer id is present in there config then it also update for same . 
-	  	  It balanced the all hirarachy order. and if the rate limit is over it will give the response like "API rate limit exceeded".
+			* when we hit the api for App_client_1 that time our plugin update the value for that consumer id also and if the parent consumer id is present in there config then it also update for same . 
+	  	  	  It balanced the all hirarachy order. and if the rate limit is over it will give the response like "API rate limit exceeded".
 
 * Other community or team contact
