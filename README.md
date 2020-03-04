@@ -4,7 +4,7 @@ This README would normally document whatever steps are necessary to get your app
 
 ### How do I get set up? ###
 
-* Summary of set up
+* Prerequisite -  PostgreSQL and Kong are installed in your system
 
 * Database configuration
 	
@@ -45,8 +45,8 @@ This README would normally document whatever steps are necessary to get your app
 	
 	* First go to that folder where is your pluging code like cd /your_path_of_plugin_folder
 	
-	* we'll generate a template for the rockspec using luarocks. luarocks is the package manager for the Lua programming lanague. 
-	  It comes with Kong. Packages and libraries managed by luarocks are referred to as "rocks" in Lua. In this case, our rockspec 
+	* Generate a template for the rockspec using luarocks. luarocks is the package manager for the Lua programming lanague. 
+	  It comes with Kong. Packages and libraries managed by luarocks are referred to as "rocks" in Lua. In this case, the rockspec 
 	  file is a document detailing what our plugin is, including where the repository is located, and what dependencies the plugin needs to run. 
 	  Run the following commands to generate a template file 
 			
@@ -56,24 +56,23 @@ This README would normally document whatever steps are necessary to get your app
 			
 			sudo luarocks make
 	
-	* Adding our custom_plugin in kong
-		* To run our plugin, we first need to inform Kong of its presence using the kong.conf file that we created earlier. Open it up, search for plugins, and add our plugin. 
-		  The line should look like this:
+	* Adding custom rate limiting plugin in Kong
+		* Append the custom plugin name in the kong.conf file as shown below
 			
 				plugins = bundled, kong-plugin-header-echo
 		
-		* Then save and exit the file. Finally, cd to the root directory of your plugin and run:
+		* Start Kong
 				
 				kong start -c /path/to/your/kong.conf
 			
-		* To verify that Kong knows about your plugin, execute the following command:
+		* To verify if the plugin is installed properly, execute the following command:
 				
 				curl http://localhost:8001/ | python -mjson.tool
 		*You should see your plugin in the plugins.available_on_server array!
 			
-* If your plugin is already deploy in kong and you added new change then how to deploy without reset the database :-
+* If your plugin is already deployed in Kong and you added new change then how to deploy without reset the database :-
 	
-	* First go to that folder where is your pluging code like cd /your_path_of_plugin_folder
+	* Go to that folder where is your pluging code like cd /your_path_of_plugin_folder
 	
 	* Run the below command :-
 		
@@ -90,13 +89,14 @@ This README would normally document whatever steps are necessary to get your app
 * How the plugin actual works :-
 
 
-	* Rate limiting plugin basically used for to apply restriction on API calls for controling the API Access.
+	* Custom Rate limiting plugin is for controling the API access hierarchical fashion. You can establish the parent-child relationship while defining the consumers. You can achive limit at all client consumer level and also indivdual client level by grouping all clients under one tenant.
+	
    
-   	* Now how it works in that case firstly we create a consumer when we create a consumer we send tag in request body the tag like it is Tenant or it is APP_CLIENT 
-	  there are multiple app clients.
+   	* While creating a consumer send tag in request body to denote the consumer as Tenant or Client etc 
+	  
    
-   	* After creating consumers we know the all consumer ids and using tag we also know the who is Tenant and who is APP_CLIENT so we used that consumer id as a parent consumer id in our 
-	  rate-limiting plugin when we enabled our plugin on that consumer.
+   	* Set Tenant consumer id as a parent consumer id in the 
+	  Custom Rate limiting plugin at the time of enabling the plugin for Client consumer.
 
 	
 			* let assume one example let say we create three consumers 
