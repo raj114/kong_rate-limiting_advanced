@@ -116,3 +116,8 @@ This README would normally document whatever steps are necessary to get your app
 	  	  	  It balanced the all hirarachy order. and if the rate limit is over it will give the response like "API rate limit exceeded".
 
 * Other community or team contact
+
+	### Kanaka Software ###
+	# 302 Indira Icon, Right Bhusari Colony, Paud Road, Pune - 411038 INDIA.
+
+	# info@kanakasoftware.com
