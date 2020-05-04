@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README #
 
 This README would normally document whatever steps are necessary to get your application up and running.
@@ -120,3 +121,6 @@ This README would normally document whatever steps are necessary to get your app
 	# Kanaka Software 
 		* Address :- 302 Indira Icon, Right Bhusari Colony, Paud Road, Pune - 411038 INDIA.
 		* Email :- info@kanakasoftware.com
+=======
+# kong_rate-limiting_advanced
+>>>>>>> 5a24a0be40de17fa1b6c586030fab5ae2802e554
