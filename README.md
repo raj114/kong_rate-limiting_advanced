@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # README #
 
 This README would normally document whatever steps are necessary to get your application up and running.
@@ -116,11 +116,3 @@ This README would normally document whatever steps are necessary to get your app
 			* When we access the API for App_client_1, the plugin will update the value for the consumer and also for the parent consumer id if applicable. 
 	  	  	  It maintains the access history for all the consumers in the hirarachy. It will give the response like "API rate limit exceeded" if consumer exhausts it's limit at individual level or parent level.
 
-* Other community or team contact
-
-	# Kanaka Software 
-		* Address :- 302 Indira Icon, Right Bhusari Colony, Paud Road, Pune - 411038 INDIA.
-		* Email :- info@kanakasoftware.com
-=======
-# kong_rate-limiting_advanced
->>>>>>> 5a24a0be40de17fa1b6c586030fab5ae2802e554
